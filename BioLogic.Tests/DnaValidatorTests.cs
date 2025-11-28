@@ -5,27 +5,33 @@ namespace BioLogic.Tests
 {
     public class DnaValidatorTests
     {
-        [Fact]
-        public void IsValidDna_ShouldReturnTrue_ForValidSequence()
+        // 1. Change [Fact] to [Theory]
+        // This tells xUnit: "I am going to pass data into this function."
+        [Theory] 
+        [InlineData("A")]           // Single char
+        [InlineData("GATTACA")]     // Standard
+        [InlineData("gattaca")]     // Lowercase (Your logic handles this)
+        [InlineData("GaTtAcA")]     // Mixed case
+        public void IsValid_ShouldReturnTrue_ForValidSequences(string sequence)
         {
-            // Arrange
-            string validSequence = "GATTACA";
-
             // Act
-            bool result = DnaValidator.IsValid(validSequence);
+            bool result = DnaValidator.IsValid(sequence);
 
             // Assert
             Assert.True(result);
         }
 
-        [Fact]
-        public void IsValidDna_ShouldReturnFalse_ForInvalidSequence()
+        [Theory]
+        [InlineData("Z")]           // Invalid char
+        [InlineData("GAT TACA")]    // Space in middle
+        [InlineData("123")]         // Numbers
+        [InlineData("!@#")]         // Symbols
+        [InlineData("")]            // Empty string
+        [InlineData(null)]          // Null
+        public void IsValid_ShouldReturnFalse_ForInvalidSequences(string sequence)
         {
-            // Arrange
-            string invalidSequence = "GATTACA-Z";
-
             // Act
-            bool result = DnaValidator.IsValid(invalidSequence);
+            bool result = DnaValidator.IsValid(sequence);
 
             // Assert
             Assert.False(result);
