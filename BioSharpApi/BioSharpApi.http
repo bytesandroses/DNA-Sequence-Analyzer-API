@@ -1,0 +1,6 @@
+@BioSharpApi_HostAddress = http://localhost:5003
+
+GET {{BioSharpApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

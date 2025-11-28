@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLogic", "BioLogic\BioLog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLogic.Tests", "BioLogic.Tests\BioLogic.Tests.csproj", "{C2F5A260-F23B-493F-B531-1403B884F88D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSharpApi", "BioSharpApi\BioSharpApi.csproj", "{DFA8976B-54EF-498F-959A-A52C602993AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C2F5A260-F23B-493F-B531-1403B884F88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F5A260-F23B-493F-B531-1403B884F88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2F5A260-F23B-493F-B531-1403B884F88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA8976B-54EF-498F-959A-A52C602993AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA8976B-54EF-498F-959A-A52C602993AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA8976B-54EF-498F-959A-A52C602993AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA8976B-54EF-498F-959A-A52C602993AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
