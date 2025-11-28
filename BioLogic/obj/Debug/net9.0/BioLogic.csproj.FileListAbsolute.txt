@@ -1,0 +1,12 @@
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/bin/Debug/net9.0/BioLogic.deps.json
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/bin/Debug/net9.0/BioLogic.dll
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/bin/Debug/net9.0/BioLogic.pdb
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.GeneratedMSBuildEditorConfig.editorconfig
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.AssemblyInfoInputs.cache
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.AssemblyInfo.cs
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.csproj.CoreCompileInputs.cache
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.sourcelink.json
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.dll
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/refint/BioLogic.dll
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/BioLogic.pdb
+/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/obj/Debug/net9.0/ref/BioLogic.dll
