@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLogic", "BioLogic\BioLogic.csproj", "{0E56FAB6-5F11-4341-9552-D133CD333414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioLogic.Tests", "BioLogic.Tests\BioLogic.Tests.csproj", "{C2F5A260-F23B-493F-B531-1403B884F88D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +14,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E56FAB6-5F11-4341-9552-D133CD333414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E56FAB6-5F11-4341-9552-D133CD333414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E56FAB6-5F11-4341-9552-D133CD333414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E56FAB6-5F11-4341-9552-D133CD333414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F5A260-F23B-493F-B531-1403B884F88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F5A260-F23B-493F-B531-1403B884F88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F5A260-F23B-493F-B531-1403B884F88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F5A260-F23B-493F-B531-1403B884F88D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
