@@ -1,3 +1,5 @@
+using BioSharpApi.Data;
+
 namespace BioSharpApi.Services
 {
     public interface IDnaService
@@ -6,5 +8,7 @@ namespace BioSharpApi.Services
         string Transcribe(string sequence);
         string GetReverseComplement(string sequence);
         double GetGcContent(string sequence);
+        
+        Task<AnalysisRecord> SaveAnalysisAsync(string sequence);
     }
 }

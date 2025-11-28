@@ -1,27 +1,37 @@
-using BioLogic; // Import your Phase 1 library
+using BioLogic;
+using BioSharpApi.Data;
 
 namespace BioSharpApi.Services
 {
     public class DnaService : IDnaService
     {
-        public bool ValidateSequence(string sequence)
+        private readonly BioContext _context;
+
+        public DnaService(BioContext context)
         {
-            return DnaValidator.IsValid(sequence);
+            _context = context;
         }
 
-        public string Transcribe(string sequence)
+        public bool ValidateSequence(string sequence) => DnaValidator.IsValid(sequence);
+        public string Transcribe(string sequence) => DnaProcessor.Transcribe(sequence);
+        public string GetReverseComplement(string sequence) => DnaProcessor.ReverseComplement(sequence);
+        public double GetGcContent(string sequence) => DnaProcessor.CalculateGcContent(sequence);
+        public async Task<AnalysisRecord> SaveAnalysisAsync(string sequence)
         {
-            return DnaProcessor.Transcribe(sequence);
-        }
+            var record = new AnalysisRecord
+            {
+                Sequence = sequence,
+                Transcription = DnaProcessor.Transcribe(sequence),
+                ReverseComplement = DnaProcessor.ReverseComplement(sequence),
+                GcContent = DnaProcessor.CalculateGcContent(sequence),
+                CreatedAt = DateTime.UtcNow
+            };
 
-        public string GetReverseComplement(string sequence)
-        {
-            return DnaProcessor.ReverseComplement(sequence);
-        }
+            _context.AnalysisHistory.Add(record);
 
-        public double GetGcContent(string sequence)
-        {
-            return DnaProcessor.CalculateGcContent(sequence);
+            await _context.SaveChangesAsync();
+
+            return record;
         }
     }
 }
