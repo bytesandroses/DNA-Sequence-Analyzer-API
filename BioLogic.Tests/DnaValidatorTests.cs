@@ -1,10 +1,34 @@
-﻿namespace BioLogic.Tests;
+﻿using Xunit;
+using BioLogic;
 
-public class UnitTest1
+namespace BioLogic.Tests
 {
-    [Fact]
-    public void Test1()
+    public class DnaValidatorTests
     {
+        [Fact]
+        public void IsValidDna_ShouldReturnTrue_ForValidSequence()
+        {
+            // Arrange
+            string validSequence = "GATTACA";
 
+            // Act
+            bool result = DnaValidator.IsValid(validSequence);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void IsValidDna_ShouldReturnFalse_ForInvalidSequence()
+        {
+            // Arrange
+            string invalidSequence = "GATTACA-Z";
+
+            // Act
+            bool result = DnaValidator.IsValid(invalidSequence);
+
+            // Assert
+            Assert.False(result);
+        }
     }
 }
