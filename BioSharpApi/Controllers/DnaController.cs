@@ -29,24 +29,23 @@ namespace BioSharpApi.Controllers
 
         // POST api/dna/analyze
         [HttpPost("analyze")]
-        public IActionResult Analyze([FromBody] DnaRequest request)
+        public async Task<IActionResult> Analyze([FromBody] DnaRequest request)
         {
-            // 1. Validation First
             if (!_dnaService.ValidateSequence(request.Sequence))
             {
                 return BadRequest("Invalid DNA sequence provided.");
             }
 
-            // 2. Perform Analysis
-            var result = new
-            {
-                Original = request.Sequence,
-                Transcribed = _dnaService.Transcribe(request.Sequence),
-                ReverseComplement = _dnaService.GetReverseComplement(request.Sequence),
-                GcContent = _dnaService.GetGcContent(request.Sequence)
-            };
+            var result = await _dnaService.SaveAnalysisAsync(request.Sequence);
 
             return Ok(result);
+        }
+
+        [HttpGet("history")]
+        public async Task<IActionResult> GetHistory([FromServices] BioSharpApi.Data.BioContext context)
+        {
+            var history = await Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync(context.AnalysisHistory);
+            return Ok(history);
         }
     }
 
