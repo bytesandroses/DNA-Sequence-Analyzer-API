@@ -38,5 +38,20 @@ namespace BioLogic.Tests
             // Assert
             Assert.Equal(expected, result);
         }
+
+        // Reverse Complement Tests
+        [Fact]
+        public void ReverseComplement_ShouldReverseAndSwap()
+        {
+            // Arrange
+            string dna = "GTCA"; 
+            // Reverse: ACTG -> Complement: TGAC
+            
+            // Act
+            string result = DnaProcessor.ReverseComplement(dna);
+
+            // Assert
+            Assert.Equal("TGAC", result);
+        }
     }
 }
