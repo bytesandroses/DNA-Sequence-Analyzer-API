@@ -411,6 +411,16 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "BioLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/BioLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BioLogic.dll": {}
+        }
       }
     }
   },
@@ -932,10 +942,16 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "BioLogic/1.0.0": {
+      "type": "project",
+      "path": "../BioLogic/BioLogic.csproj",
+      "msbuildProject": "../BioLogic/BioLogic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "BioLogic >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -967,7 +983,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/BioLogic.csproj": {
+              "projectPath": "/home/iabodunrin/Repositories/DNA-Sequence-Analyzer-API/BioLogic/BioLogic.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
