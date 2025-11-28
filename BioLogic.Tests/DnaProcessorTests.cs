@@ -5,30 +5,38 @@ namespace BioLogic.Tests
 {
     public class DnaProcessorTests
     {
-        [Fact]
-        public void CalculateGcContent_ShouldReturnCorrectPercentage()
+        // GC Content Tests
+        [Theory]
+        [InlineData("GCGCA", 0.8)]      // Standard (4/5)
+        [InlineData("gcgca", 0.8)]      // Lowercase (Should handle it)
+        [InlineData("AAAAA", 0.0)]      // 0% GC
+        [InlineData("GGGGG", 1.0)]      // 100% GC
+        [InlineData("", 0.0)]           // Empty string
+        [InlineData(null, 0.0)]         // Null check (Robustness)
+        public void CalculateGcContent_ShouldReturnCorrectPercentage(string dna, double expected)
         {
-            // Arrange
-            string dna = "GCGCA"; // 80% of the chars are G or C (4/5), so the result should be 0.8
-
             // Act
             double result = DnaProcessor.CalculateGcContent(dna);
 
             // Assert
-            Assert.Equal(0.8, result);
+            // Use 2 decimal places to avoid floating point errors
+            Assert.Equal(expected, result, precision: 2);
         }
 
-        [Fact]
-        public void Transcribe_ShouldChangeTtoU()
+        // Transcription Tests
+        [Theory]
+        [InlineData("GATTACA", "GAUUACA")]  // Standard
+        [InlineData("gattaca", "GAUUACA")]  // Lowercase input -> Uppercase output
+        [InlineData("CCGG", "CCGG")]        // No Ts to change
+        [InlineData("TTTT", "UUUU")]        // All Ts
+        [InlineData("", "")]                // Empty
+        public void Transcribe_ShouldReplaceTWithU(string dna, string expected)
         {
-            // Arrange
-            string dna = "GATTACA";
-
             // Act
-            string rna = DnaProcessor.Transcribe(dna);
+            string result = DnaProcessor.Transcribe(dna);
 
             // Assert
-            Assert.Equal("GAUUACA", rna);
+            Assert.Equal(expected, result);
         }
     }
 }
