@@ -18,5 +18,30 @@ namespace BioLogic
 
             return sequence.ToUpper().Replace('T', 'U');
         }
+
+        public static string ReverseComplement(string sequence)
+        {
+            if (string.IsNullOrEmpty(sequence)) return string.Empty;
+
+            var upperSeq = sequence.ToUpper();
+            
+            char[] nucleotides = upperSeq.ToCharArray();
+            
+            Array.Reverse(nucleotides);
+
+            for (int i = 0; i < nucleotides.Length; i++)
+            {
+                nucleotides[i] = nucleotides[i] switch
+                {
+                    'A' => 'T',
+                    'T' => 'A',
+                    'C' => 'G',
+                    'G' => 'C',
+                    _ => nucleotides[i] // Keep foreign characters unchanged
+                };
+            }
+
+            return new string(nucleotides);
+        }
     }
 }
