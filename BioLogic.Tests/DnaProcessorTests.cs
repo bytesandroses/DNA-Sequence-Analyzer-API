@@ -40,18 +40,19 @@ namespace BioLogic.Tests
         }
 
         // Reverse Complement Tests
-        [Fact]
-        public void ReverseComplement_ShouldReverseAndSwap()
+        [Theory]
+        [InlineData("GTCA", "TGAC")]              // Standard (Reverse: ACTG -> Swap: TGAC)
+        [InlineData("AAAA", "TTTT")]              // All A -> All T
+        [InlineData("GCGC", "GCGC")]              // Palindrome (Reads same forward and complement)
+        [InlineData("gtca", "TGAC")]              // Lowercase input -> Uppercase output
+        [InlineData("", "")]                      // Empty string safety
+        public void ReverseComplement_ShouldReverseAndSwap(string dna, string expected)
         {
-            // Arrange
-            string dna = "GTCA"; 
-            // Reverse: ACTG -> Complement: TGAC
-            
             // Act
             string result = DnaProcessor.ReverseComplement(dna);
 
             // Assert
-            Assert.Equal("TGAC", result);
+            Assert.Equal(expected, result);
         }
     }
 }
