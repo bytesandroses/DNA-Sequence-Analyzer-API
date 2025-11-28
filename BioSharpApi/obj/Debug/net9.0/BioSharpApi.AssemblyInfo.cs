@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BioSharpApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+432bb1e363c17510c38b574380cdf9563269e708")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2588adf7dd5335745f78bae69f583c8c06aec96")]
 [assembly: System.Reflection.AssemblyProductAttribute("BioSharpApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BioSharpApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
