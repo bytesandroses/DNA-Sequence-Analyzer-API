@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BioLogic.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c97fa47551c3d6bb1e62e1c48884eef7333117dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b4c56c63729c4549fa44e81cd0d2c21f70002e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BioLogic.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BioLogic.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
