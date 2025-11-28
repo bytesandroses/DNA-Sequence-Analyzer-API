@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using BioSharpApi.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace BioSharpApi.Controllers
 {
