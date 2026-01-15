@@ -5,8 +5,6 @@ namespace BioLogic.Tests
 {
     public class DnaValidatorTests
     {
-        // 1. Change [Fact] to [Theory]
-        // This tells xUnit: "I am going to pass data into this function."
         [Theory] 
         [InlineData("A")]           // Single char
         [InlineData("GATTACA")]     // Standard
